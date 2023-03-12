@@ -44,7 +44,7 @@ contract ThreeCardPoker {
   // place a bet
   function joinGame() external payable {
     require(msg.sender != dealer, "Dealer cannot join the game");
-    require(player != address(0), "Cannot join the game right now");
+    require(player == address(0), "Cannot join the game right now");
     require(state == GameState.Betting, "Cannot place bet at this time");
     require(msg.value <= address(this).balance, "Cannot bet more than the pot");
 
