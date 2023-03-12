@@ -1,1 +1,1 @@
-# voting-sol
+# Poker Game smart contract - solidity
